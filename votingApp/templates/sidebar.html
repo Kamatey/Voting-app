@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./sidebar.css" />
+  </head>
+  <body>
+    <header>
+      <div class="menu">&#9776;</div>
+    </header>
+    <aside id="sidebar">
+      <div class="top">
+        <div class="logo">
+          <img src="./asserts/logo.png" alt="" />
+          <span>VotingHub</span>
+          <div class="closebtn">&times;</div>
+        </div>
+
+        <ul class="side_links">
+          <li>
+            <a href="">
+              <img src="./asserts/home.png" alt="" />
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="./asserts/crown.png" alt="" />
+              <span>Contest</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="./asserts/records.png" alt="" />
+              <span>Statistics</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="./asserts/stats.png" alt="" />
+              <span>Blog</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="help">
+        <a href="">
+          <img src="./asserts/help.png" alt="" />
+          <span>Help</span>
+        </a>
+      </div>
+    </aside>
+
+    <script>
+      const menuBtn = document.querySelector(".menu");
+      const sidebar = document.querySelector("#sidebar");
+      const closeBtn = document.querySelector(".closebtn");
+
+      menuBtn.addEventListener("click", () => {
+        sidebar.style.left = 0;
+      });
+
+      closeBtn.addEventListener("click", () => {
+        sidebar.style.left = "-100%";
+      });
+    </script>
+  </body>
+</html>
