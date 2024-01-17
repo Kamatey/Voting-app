@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+* body {
+  background: #f1efef;
+}
+* body header {
+  background: white;
+  padding: 1rem 5%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.07);
+}
+* body header .menu {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: none;
+  font-size: 20px;
+  color: #232222;
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  * body header .menu {
+    display: block;
+  }
+}
+* body aside {
+  width: 20%;
+  height: 100vh;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.07);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: 0.4s ease;
+}
+* body aside .top {
+  position: relative;
+  width: 100%;
+}
+* body aside .top .logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+* body aside .top .logo img {
+  width: 3rem;
+}
+* body aside .top .logo .closebtn {
+  position: absolute;
+  font-size: 1.6rem;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  * body aside .top .logo .closebtn {
+    display: block;
+  }
+}
+* body aside .top .side_links {
+  margin-top: 2rem;
+}
+* body aside .top .side_links li {
+  width: 100%;
+  list-style: none;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+* body aside .top .side_links li:hover {
+  background: #f1efef;
+}
+* body aside .top .side_links li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #232222;
+}
+* body aside .help {
+  width: 100%;
+}
+* body aside .help a {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #232222;
+  font-size: 16px;
+}
+* body aside .help a img {
+  width: 1.5rem;
+}
+@media screen and (max-width: 1000px) {
+  * body aside {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 700px) {
+  * body aside {
+    width: 60%;
+    left: -100%;
+  }
+  * body aside .top .side_links li a {
+    font-size: 15px;
+  }
+  * body aside .top .side_links li a img {
+    width: 1.5rem;
+  }
+}/*# sourceMappingURL=sidebar.css.map */

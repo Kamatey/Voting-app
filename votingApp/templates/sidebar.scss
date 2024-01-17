@@ -1,0 +1,143 @@
+$light: #f1efef;
+$dark: #232222;
+$box-shadow: 0 0 5px rgba(0, 0, 0, 0.07);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+  body {
+    background: $light;
+
+    header {
+      background: white;
+      padding: 1rem 5%;
+      box-shadow: $box-shadow;
+
+      .menu {
+        width: fit-content;
+        display: none;
+        font-size: 20px;
+        color: $dark;
+        cursor: pointer;
+
+        @media screen and (max-width: 700px) {
+          display: block;
+        }
+      }
+    }
+
+    aside {
+      width: 20%;
+      height: 100vh;
+      background: white;
+      box-shadow: $box-shadow;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 1rem;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+      transition: 0.4s ease;
+
+      .top {
+        position: relative;
+
+        width: 100%;
+        .logo {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          img {
+            width: 3rem;
+          }
+
+          .closebtn {
+            position: absolute;
+            font-size: 1.6rem;
+            cursor: pointer;
+            top: 0;
+            right: 0;
+            display: none;
+
+            @media screen and (max-width: 700px) {
+              display: block;
+            }
+          }
+        }
+
+        .side_links {
+          margin-top: 2rem;
+
+          li {
+            width: 100%;
+            list-style: none;
+            margin-bottom: 1rem;
+            // background: $light;
+            padding: 1rem;
+            border-radius: 5px;
+
+            &:hover {
+              background: $light;
+            }
+
+            a {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              text-decoration: none;
+              color: $dark;
+            }
+          }
+        }
+      }
+
+      .help {
+        width: 100%;
+
+        a {
+          width: fit-content;
+          margin: 10px auto;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          text-decoration: none;
+          color: $dark;
+          font-size: 16px;
+
+          img {
+            width: 1.5rem;
+          }
+        }
+      }
+
+      @media screen and (max-width: 1000px) {
+        width: 30%;
+      }
+
+      @media screen and (max-width: 700px) {
+        width: 60%;
+        left: -100%;
+
+        .top {
+          .side_links {
+            li {
+              a {
+                font-size: 15px;
+
+                img {
+                  width: 1.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
